@@ -6,9 +6,29 @@
     <title>Lecture Six Assignment</title>
 </head>
 <body>
+    <!-- Mult. Table -->
+     <h2>Mult. Table</h2>
     <ul id = "multTable"></ul>
     <button id="tableButton" onclick="createMultTable()">Create Multiplication Table</button>
+    <br><br>
 
+    <!-- Colorful Buttons -->
+     <h2>Colorful Buttons</h2>
+     <br>
+    <div id="buttonGroup"></div>
+    <br>
+    
+    <!-- Color Select -->
+     <label for="colorSelect" onchange="colorSelect(this)">Select Button Colors: </label>
+     <select name="colorSelect" id="colorSelect">
+        <option value="default">Default</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="random">Random</option>
+     </select>
+
+    <!-- Link To JS -->
     <script src="index.js"></script>
 </body>
 </html>
