@@ -31,8 +31,19 @@
       return `#${randomColor.padStart(6, '0')}`;
     }
     // color select
-    function colorSelect(x){
-        if(x.value = "red"){
-            document.getElementsByClassName("btn").style.backgroundColor = "Red"
+    function colorSelect(selectElem) {
+        let color = selectElem.value;
+        let buttons = document.getElementsByClassName("btn");
+        for (let i = 0; i < buttons.length; i++) {
+            if (color === "default") {
+                // using the stored colors from earlier to reset the colors
+                buttons[i].style.backgroundColor = defaultColors[i];
+            } else if (color === "random") {
+                //  random color for each button made by using the random color function
+                buttons[i].style.backgroundColor = getRandomColor();
+            } else {
+                // using the values set within the selections we set the button colors
+                buttons[i].style.backgroundColor = color;
+            }
         }
     }
